@@ -1,0 +1,21 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Dead Rails")
+
+local KillingCheats = PhantomForcesWindow:NewSection("Main")
+
+KillingCheats:CreateButton("Night Vision", function()
+local lighting = game:GetService("Lighting")
+
+lighting.Brightness = 5 -- Adjust this value for desired brightness
+lighting.Ambient = Color3.new(1, 1, 1) -- Set ambient light to full white
+lighting.FogEnd = 0 -- Remove fog (optional)
+lighting.ShadowSoftness = 0 -- Remove shadows (optional)
+end)
+
+KillingCheats:CreateButton("Unlock Horse Class", function()
+local args = {
+    [1] = "Ironclad"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("RemotePromise"):WaitForChild("Remotes"):WaitForChild("C_BuyClass"):FireServer(unpack(args))
+end)
