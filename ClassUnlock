@@ -15,7 +15,7 @@ end)
 
 KillingCheats:CreateButton("Unlock Horse Class", function()
 local args = {
-    [1] = "Ironclad"
+    [1] = "Eggslinger"
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("RemotePromise"):WaitForChild("Remotes"):WaitForChild("C_BuyClass"):FireServer(unpack(args))
 end)
