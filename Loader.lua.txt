@@ -50,8 +50,8 @@ local apiLoader = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/lib
 local API = apiLoader()
 
 local Window = Fluent:CreateWindow({
-    Title = "Nebula Hub",
-    SubTitle = "by Nebula Team",
+    Title = "Kazuhiro Hub",
+    SubTitle = "by 4rrixxTeam",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, 
@@ -115,7 +115,7 @@ local function checkKey(input_key)
     if not CurrentScriptID then
         Fluent:Notify({
             Title = "Unsupported Game",
-            Content = "Nebula Hub does not currently support this game.",
+            Content = "Kazuhiro Hub does not currently support this game.",
             Duration = 5
         })
         return
@@ -124,7 +124,7 @@ local function checkKey(input_key)
     API.script_id = CurrentScriptID
     local status = API.check_key(input_key or _G['script_key'])
     
-    if status.code == "KEY_VALID" then
+    if status.code == "KEY_INVALID" then
         script_key = input_key or _G['script_key']
         Fluent:Notify({
             Title = "Verification Complete",
@@ -176,8 +176,8 @@ else
 end
 
 Fluent:Notify({
-    Title = "Nebula Hub",
-    Content = "Welcome to Nebula Hub!",
+    Title = "Kazuhiro Hub",
+    Content = "Welcome to Kazuhiro Hub!",
     Duration = 5
 })
 
