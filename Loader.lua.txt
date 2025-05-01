@@ -46,7 +46,7 @@ local Cloneref = cloneref or _G['clonereference'] or function(instance)
 end
 local Players, _ = Cloneref(game:GetService("Players")), Cloneref(game:GetService("HttpService"))
 
-local apiLoader = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))
+local apiLoader = loadstring(game:HttpGet())
 local API = apiLoader()
 
 local Window = Fluent:CreateWindow({
